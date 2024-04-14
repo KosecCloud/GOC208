@@ -1,0 +1,58 @@
+http://b921.gopas.cloud/wb/
+1111111
+
+MAP Toolkit:
+https://www.microsoft.com/en-us/download/details.aspx?id=7826
+
+Settings - cmd - scratch space:
+https://www.deploymentresearch.com/winpe-5-0-scratch-space-in-mdt-2013-and-configmgr-2012-r2/
+
+https://www.systemcenterdudes.com/monitor-sccm-task-sequence/
+
+802.1x:
+https://www.asquaredozen.com/2018/07/29/configuring-802-1x-authentication-for-windows-deployment/
+
+WSUS CleanUp:
+https://docs.microsoft.com/en-us/troubleshoot/mem/configmgr/wsus-maintenance-guide
+
+App Deployment:
+https://psappdeploytoolkit.com/
+https://github.com/PSAppDeployToolkit/PSAppDeployToolkit/releases
+
+SDK:
+https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/
+
+ADK+WSIM
+https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/update-windows-settings-and-scripts-create-your-own-answer-file-sxs?view=windows-11
+
+WDS Troubleshooting:
+https://learn.microsoft.com/en-us/troubleshoot/windows-server/deployment/enable-logging-windows-deployment-service
+
+MDT:
+https://www.deploymentresearch.com/hydration-kit-for-windows-server-2022-sql-server-2019-and-configmgr-current-branch/
+
+WQL - Vendor - Model:
+https://www.ronnipedersen.com/wmi-query/
+
+Autopilot HASH:
+https://www.powershellgallery.com/packages/Get-WindowsAutopilotInfo/3.5
+
+MECM Evaluation Lab:
+https://www.microsoft.com/en-us/evalcenter/download-mem-evaluation-lab-kit
+
+http://b921.gopas.cloud/wb/
+1111111
+
+MAP Toolkit:
+https://www.microsoft.com/en-us/download/details.aspx?id=7826
+
+Settings - cmd - scratch space:
+https://www.deploymentresearch.com/winpe-5-0-scratch-space-in-mdt-2013-and-configmgr-2012-r2/
+
+https://www.systemcenterdudes.com/monitor-sccm-task-sequence/
+
+802.1x:
+https://www.asquaredozen.com/2018/07/29/configuring-802-1x-authentication-for-windows-deployment/
+
+WSUS CleanUp:
+https://docs.microsoft.com/en-us/troubleshoot/mem/configmgr/wsus-maintenance-guide

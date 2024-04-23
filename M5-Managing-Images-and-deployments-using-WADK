@@ -1,6 +1,7 @@
 Module 5: Managing images and deployments using the Windows ADK
 
 Lab A: Preparing the imaging and Windows PE environment
+
 Exercise 1: Configuring a custom Windows PE environment
 
 Task 1: Set up the Windows PE build environment
@@ -17,30 +18,33 @@ Note: Note the size of the Boot.wim file. It will be 239,002 kilobytes (KB).
 Task 2: Mount the base Windows PE image
 Note: To avoid syntax errors, copy and paste the commands into the Windows PowerShell
 command prompt from the E:\Labfiles\Mod05\Mod05_DISM_Powershell.txt file.
+
 1. Click Start and then click the Windows PowerShell tile.
 Note: The version of DISM installed with Windows ADK for Windows 10 is not the same as
 the version in the default Windows PowerShell console. You must add the correct DISM module
 for the current version of Windows ADK.
-2. In the Administrator: Windows PowerShell window, type the following cmdlet, and then press
-Enter:
-Import-Module "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment
-Kit\Deployment Tools\amd64\DISM"
+
+2. In the Administrator: Windows PowerShell window, type the following cmdlet, and then press Enter:
+
+Import-Module "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\amd64\DISM"
+
 3. In the Administrator: Windows PowerShell window, mount the Boot.wim image by typing the
 following command, and then pressing Enter:
-Mount-WindowsImage –ImagePath E:\Winpe64\Media\Sources\Boot.wim –Index 1 –Path
-E:\Winpe64\Mount
-L5-20 Managing images and deployments using the Windows ADK
+
+Mount-WindowsImage –ImagePath C:\Winpe64\Media\Sources\Boot.wim –Index 1 –Path C:\Winpe64\Mount
 
 Task 3: Add drivers and optional components to the Windows PE image
+
 1. To add the Microsoft Hyper-V drivers to the Windows PE image, type the following command, and then press Enter:
-Add-WindowsDriver –Path E:\winpe64\mount –Driver E:\Software\Drivers\HyperVx64 -Recurse -ForceUnsigned
+Add-WindowsDriver –Path C:\winpe64\mount –Driver C:\Software\Drivers\HyperVx64 -Recurse -ForceUnsigned
+
 Note: The third-party drivers you injected into the image will be listed. Confirm that the
 last one on the list has a Published Name of oem9.inf.
 
 2. To add support for the Windows PowerShell command-line interface to the Windows PE image, type
 the following commands, and then press Enter after each:
-CD “C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment kit\Windows
-preInstallation Environment\amd64\WinPE_OCs”
+
+CD “C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment kit\Windows preInstallation Environment\amd64\WinPE_OCs”
 
 Add-WindowsPackage –Path E:\winpe64\mount –PackagePath .\WinPE-NetFX.cab
 Add-WindowsPackage –Path E:\winpe64\mount –PackagePath .\WinPE-Scripting.cab
@@ -50,30 +54,28 @@ Add-WindowsPackage –Path E:\winpe64\mount –PackagePath .\WinPE-DismCmdlets.c
 
 Note: Each Add-WindowsPackage cmdlet might take several minutes.
 Note: To avoid syntax errors, copy and paste the commands from the
-E:\Labfiles\Mod05\Mod05_DISM_Powershell.txt file into the Windows PowerShell
-command prompt.
+E:\Labfiles\Mod05\Mod05_DISM_Powershell.txt file into the Windows PowerShell command prompt.
 
 Task 4: Save changes and dismount the image
-1. Commit the changes to the Windows PE image by typing the following command, and then pressing
-Enter:
+1. Commit the changes to the Windows PE image by typing the following command, and then pressing Enter:
+
 Dismount-WindowsImage –Path E:\winpe64\mount –Save
 
 2. Use File Explorer to view the contents of the E:\Winpe64\media\Sources folder. Note the new size
 of the Boot.wim file.
 
 3. Close File Explorer and Windows PowerShell.
-Deploying Windows Desktops and Enterprise Applications L5-21
 
 Task 5: Create Windows PE Media
 
 1. To create an International Organization for Standardization (ISO) image of the Boot.wim that you can
 use to create boot media, restore the Deployment and Imaging Tools Environment window, and
 then run the following commands, pressing Enter after each command:
+
 MD E:\BootISO
 MakeWinpeMedia /iso E:\Winpe64 E:\BootISO\WinPEx64.iso
 
-2. Use File Explorer to open the E:\BootISO folder, and then ensure that the WinPEx64.iso file was
-created.
+2. Use File Explorer to open the E:\BootISO folder, and then ensure that the WinPEx64.iso file was created.
 Results: After completing this exercise, you should have customized the Windows Preinstallation
 Environment (Windows PE) image and created an .iso file of the image.
 

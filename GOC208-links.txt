@@ -7,6 +7,9 @@ https://github.com/Dede333/VB_DISMGUI/releases/tag/19
 MAP Toolkit:
 https://www.microsoft.com/en-us/download/details.aspx?id=7826
 
+WindowsPe Optional Components (OC) 
+https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference?view=windows-11
+
 Settings - cmd - scratch space:
 https://www.deploymentresearch.com/winpe-5-0-scratch-space-in-mdt-2013-and-configmgr-2012-r2/
 
